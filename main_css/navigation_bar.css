@@ -1,0 +1,53 @@
+/* Enhanced navigation bar */
+header {
+    background: linear-gradient(90deg, #6a5acd 0%, #7b68ee 100%);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #2c2c54 0%, #1e1e3f 100%);
+}
+
+.nav-links a {
+    color: white !important;
+    position: relative;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ffeeba !important;
+}
+
+.theme-toggle {
+    background: white;
+    border-radius: 50%;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #ffeeba;
+    transform: rotate(20deg);
+}
